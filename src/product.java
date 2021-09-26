@@ -140,7 +140,7 @@ public class product {
                     pst.setString(1, bid);
 
                     pst.executeUpdate();
-                    JOptionPane.showMessageDialog(null, "Record Deleteeeeee!!!!!");
+                    JOptionPane.showMessageDialog(null, "Record Deleted!!!!!");
 
                     txtName.setText("");
                     txtPrice.setText("");
