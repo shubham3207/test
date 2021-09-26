@@ -127,6 +127,35 @@ public class product {
                 }
             }
         });
+        deleteButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String bid;
+
+                bid = txtpid.getText();
+
+
+                try {
+                    pst = con.prepareStatement("delete from products  where pid = ?");
+                    pst.setString(1, bid);
+
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "Record Deleteeeeee!!!!!");
+
+                    txtName.setText("");
+                    txtPrice.setText("");
+                    txtQty.setText("");
+                    txtName.requestFocus();
+                    txtpid.setText("");
+                }
+
+                catch (SQLException e1)
+                {
+
+                    e1.printStackTrace();
+                }
+            }
+        });
     }
        Connection con;
        PreparedStatement pst;
