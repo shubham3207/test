@@ -41,7 +41,7 @@ public class product {
                     pst.setString(2, price);
                     pst.setString(3, qty);
                     pst.executeUpdate();
-                    JOptionPane.showMessageDialog(null,"Record Addedddddd!!!!");
+                    JOptionPane.showMessageDialog(null,"Record Added!!!!");
 
                     txtName.setText("");
                     txtPrice.setText("");
