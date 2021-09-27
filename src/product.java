@@ -22,4 +22,16 @@ public class product {
         frame.pack();
         frame.setVisible(true);
     }
+    public product() {
+        connect();
+
+        saveButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String name,price,qty;
+
+                name = txtName.getText();
+                price = txtPrice.getText();
+                qty = txtQty.getText();
+
 
