@@ -33,5 +33,26 @@ public class product {
                 name = txtName.getText();
                 price = txtPrice.getText();
                 qty = txtQty.getText();
+                try {
+                    pst = con.prepareStatement("insert into products(pname,price,qty)values(?,?,?)");
+                    pst.setString(1, name);
+                    pst.setString(2, price);
+                    pst.setString(3, qty);
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null,"Record Addedddddd!!!!");
+
+                    txtName.setText("");
+                    txtPrice.setText("");
+                    txtQty.setText("");
+                    txtName.requestFocus();
+                }
+
+                catch (SQLException e1)
+                {
+                    e1.printStackTrace();
+                }
+
+            }
+        });
 
 
