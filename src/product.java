@@ -66,5 +66,29 @@ public class product {
 
                     if(rs.next()==true)
                     {
+                        String name = rs.getString(1);
+                        String price = rs.getString(2);
+                        String qty = rs.getString(3);
+
+                        txtName.setText(name);
+                        txtPrice.setText(price);
+                        txtQty.setText(qty);
+                    }
+                    else
+                    {
+                        txtName.setText("");
+                        txtPrice.setText("");
+                        txtQty.setText("");
+                        JOptionPane.showMessageDialog(null,"Invalid Product ID");
+
+                    }
+                }
+
+                catch (SQLException ex)
+                {
+                    ex.printStackTrace();
+                }
+            }
+        });
 
 
