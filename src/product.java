@@ -54,5 +54,17 @@ public class product {
 
             }
         });
+        searchButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                try {
+
+                    String pid = txtpid.getText();
+                    pst = con.prepareStatement("select pname,price,qty from products where pid = ?");
+                    pst.setString(1, pid);
+                    ResultSet rs = pst.executeQuery();
+
+                    if(rs.next()==true)
+                    {
 
 
