@@ -101,4 +101,30 @@ public class product {
                 qty = txtQty.getText();
                 pid = txtpid.getText();
 
+                try {
+
+                    pst = con.prepareStatement("update products set pname = ?,price = ?,qty = ? where pid = ?");
+                    pst.setString(1, name);
+                    pst.setString(2, price);
+                    pst.setString(3, qty);
+                    pst.setString(4, pid);
+
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "Record Updateee!!!!!");
+
+                    txtName.setText("");
+                    txtPrice.setText("");
+                    txtQty.setText("");
+                    txtName.requestFocus();
+                    txtpid.setText("");
+                }
+
+                catch (SQLException e1)
+                {
+
+                    e1.printStackTrace();
+                }
+            }
+        });
+
 
