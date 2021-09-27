@@ -132,6 +132,28 @@ public class product {
                 String bid;
 
                 bid = txtpid.getText();
+                try {
+                    pst = con.prepareStatement("delete from products  where pid = ?");
+                    pst.setString(1, bid);
+
+                    pst.executeUpdate();
+                    JOptionPane.showMessageDialog(null, "Record Deleted!!!!!");
+
+                    txtName.setText("");
+                    txtPrice.setText("");
+                    txtQty.setText("");
+                    txtName.requestFocus();
+                    txtpid.setText("");
+                }
+
+                catch (SQLException e1)
+                {
+
+                    e1.printStackTrace();
+                }
+            }
+        });
+    }
 
 
 
