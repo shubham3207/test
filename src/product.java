@@ -126,5 +126,12 @@ public class product {
                 }
             }
         });
+        deleteButton1.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String bid;
+
+                bid = txtpid.getText();
+
 
 
