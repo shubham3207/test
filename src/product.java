@@ -154,6 +154,30 @@ public class product {
             }
         });
     }
+    Connection con;
+    PreparedStatement pst;
+    public void connect()
+    {
+        try {
+            Class.forName("com.mysql.jdbc.Driver");
+            con = DriverManager.getConnection("jdbc:mysql://localhost/gbproducts", "root", "");
+            System.out.println("Success");
+        }
+        catch (ClassNotFoundException ex)
+        {
+            ex.printStackTrace();
+        }
+        catch (SQLException ex)
+        {
+            ex.printStackTrace();
+        }
+    }
+
+
+
+
+}
+
 
 
 
