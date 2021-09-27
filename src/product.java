@@ -15,3 +15,11 @@ public class product {
     private JTextField txtpid;
     private JButton searchButton;
 
+    public static void main(String[] args) {
+        JFrame frame = new JFrame("product");
+        frame.setContentPane(new product().Main);
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        frame.pack();
+        frame.setVisible(true);
+    }
+
