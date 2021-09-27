@@ -91,4 +91,14 @@ public class product {
             }
         });
 
+        updateButton.addActionListener(new ActionListener() {
+            @Override
+            public void actionPerformed(ActionEvent e) {
+                String pid,name,price,qty;
+
+                name = txtName.getText();
+                price = txtPrice.getText();
+                qty = txtQty.getText();
+                pid = txtpid.getText();
+
 
