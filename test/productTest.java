@@ -7,7 +7,7 @@ public class productTest {
     @Test
     public void main() {
         String name;
-        name = "samsung";
-        assertEquals("samsung",name);
+        name = "iphone";
+        assertEquals("iphone",name);
     }
 }
